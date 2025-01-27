@@ -408,16 +408,16 @@ def main(_):
       }
       results_dict[i_rep] = results_dict_single_rep
       with open(results_json_path, "w") as f:
-        json.dump(results_dict, f, indent=4)
+          json.dump(results_dict, f, indent=4)
       if found_optimal:
-        print(
-            f"Repetition {i_rep+1}, optimal found at Step {i_step+1}, saving"
-            f" final results to\n{save_folder}"
-        )
-        num_convergence_steps.append(i_step + 1)
-        break
+          print(
+              f"Repetition {i_rep+1}, optimal found at Step {i_step+1}, saving"
+              f" final results to\n{save_folder}"
+          )
+          num_convergence_steps.append(i_step + 1)
+          break
   print(f"num_convergence_steps: {num_convergence_steps}")
 
 
 if __name__ == "__main__":
-  app.run(main)
+    app.run(main)
